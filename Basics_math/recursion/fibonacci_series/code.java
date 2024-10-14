@@ -1,7 +1,7 @@
-package DSA_Striver_A_to_Z.Basics_math.recursion.fibonacci_series;
-import java.util.*;
+package Basics_math.recursion.fibonacci_series;import java.util.*;
 
 class code {
+
     //METHOD 1
     
     public static void fibonacci1(int n){
