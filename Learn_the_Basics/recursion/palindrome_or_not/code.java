@@ -1,4 +1,4 @@
-package DSA_Striver_A_to_Z.Basics_math.recursion.palindrome_or_not;
+package Learn_the_Basics.recursion.palindrome_or_not;
 import java.util.*;
 
 public class code {

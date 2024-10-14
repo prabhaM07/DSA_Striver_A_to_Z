@@ -1,4 +1,4 @@
-package Basics_math.Hashing.Frequencies_of_Limited_Range_Array_Elements; 
+package Learn_the_Basics.Hashing.Frequencies_of_Limited_Range_Array_Elements; 
 import java.util.*;
 
 class code {
