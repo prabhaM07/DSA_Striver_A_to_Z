@@ -17,7 +17,7 @@ class code {
 
     //METHOD 2
 
-    public static void reverseArray(int arr[]) {
+    public static int[] reverseArray(int arr[]) {
         Integer[] boxedArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
         
         // Reverse the list
@@ -25,6 +25,7 @@ class code {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = boxedArray[i];
         }
+        return arr;
         
     }
     public static void main(String[] args) {
@@ -41,14 +42,11 @@ class code {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-
-        // Call the static reverse method 1
-        reverse(arr, 0, arr.length - 1);
         // Call the static reverse method 2
-        reverseArray(arr);
+        int[] ans = reverseArray(arr);
 
 
         // Output the reversed array
-        System.out.println("Reversed array: " + Arrays.toString(arr));
+        System.out.println("Reversed array: " + Arrays.toString(ans));
     }
 }
