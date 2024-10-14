@@ -2,6 +2,51 @@ package DSA_Striver_A_to_Z.Basics_math.recursion.palindrome_or_not;
 import java.util.*;
 
 public class code {
+    /*
+     METHOD 1
+  
+    public static boolean isPalindrome(String s) {
+        int i=0;
+        int j=s.length()-1;
+        while(i<j){
+            char l= s.charAt(i);
+            char r= s.charAt(j);
+            if(l!=r){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        System.out.println(isPalindrome(s));
+    }
+    */
+    // METHOD 2 using recursion
+
+    public static boolean isPalindrome(String s,int i,int j) {
+        if(i>=j){
+            return true;
+        }
+        char l=s.charAt(i);
+        char r=s.charAt(j);
+        if(l!=r){
+            return false;
+        }
+        return isPalindrome(s,i+1,j-1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        System.out.println(isPalindrome(s,0,s.length()-1));
+    }
+
+    /* 
+    METHOD 3
+
         public String processString(String s) {
             return s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         }
@@ -27,4 +72,5 @@ public class code {
             System.out.println(result);
             
         }
+            */
 }

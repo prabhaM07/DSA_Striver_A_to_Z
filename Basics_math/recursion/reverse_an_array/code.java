@@ -2,6 +2,9 @@ package DSA_Striver_A_to_Z.Basics_math.recursion.reverse_an_array;
 import java.util.*;
 
 class code {
+
+    //METHOD 1
+
     public static void reverse(int arr[], int start, int end) {
         if (start > end) {
             return;
@@ -12,6 +15,18 @@ class code {
         reverse(arr, start + 1, end - 1);
     }
 
+    //METHOD 2
+
+    public static void reverseArray(int arr[]) {
+        Integer[] boxedArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        
+        // Reverse the list
+        Collections.reverse(Arrays.asList(boxedArray));
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = boxedArray[i];
+        }
+        
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -27,8 +42,11 @@ class code {
             arr[i] = sc.nextInt();
         }
 
-        // Call the static reverse method
+        // Call the static reverse method 1
         reverse(arr, 0, arr.length - 1);
+        // Call the static reverse method 2
+        reverseArray(arr);
+
 
         // Output the reversed array
         System.out.println("Reversed array: " + Arrays.toString(arr));
